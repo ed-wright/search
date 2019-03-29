@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #007bff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    justify-content: center;
+    height: 100vh;
+}
+
+.search-container-top {
+    justify-content: center;
+    height: auto;
+}
+
+.title {
+    color: #fff;
+    align-self: center;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.search {
+    margin-top: 20px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.search .searchTerm {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 15px;
+    color: #000;
+    font-size: 18px;
+}
+
+.search i {
+    align-self: center;
+    padding-right: 15px;
+}
+
+.branding {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #ccc;
+}
+
+.ac-container {
+    background-color: #fff;
+    display: flex;
+    margin: 20px 15px;
+    padding: 5px 0px;
+    border-radius: 4px;
+    display: none;
+}
+
+.ac-container table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    background-color: #fff;
+}
+
+.ac-container table thead th {
+    vertical-align: bottom;
+}
+
+.ac-container table th, .ac-container table td {
+    padding: .3rem;
+    vertical-align: top;
+}
+
+.ac-container table tbody tr:nth-of-type(2n+1) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.ac-container table tbody tr:hover {
+    color: #212529;
+    background-color: rgba(0,0,0,.075);
+}
