@@ -1,74 +1,69 @@
 acronyms = [
     {
-        "acronym": "ABCD",
+        "acronym": "AB",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AC",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AD",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AE",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AF",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AG",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AH",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AI",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AJ",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     },
     {
-        "acronym": "ABCD",
+        "acronym": "AK",
         "full": "Alpha Bravo Charlie Delta",
         "description": "This does Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta Alpha Bravo Charlie Delta"
     }
 ];
 
-// $.each(acronyms, function(i, field){
-//     console.log(field);
-// });
+version = "v1.1";
 
 // listen for keypress within the searchbar
 $(".searchTerm").keyup(function(){
     if($('.searchTerm').val()) {
-        // console.log("I have a value");
         gotSearchTerm();
     } else {
-        // console.log("I no longer have a value");
         notGotSearchTerm();
     }
 });
 
 // check if the searchbar has a value at initial loading
 if($('.searchTerm').val()) {
-    // console.log("I already have a value");
     gotSearchTerm();
 };
 
@@ -92,10 +87,11 @@ function performSearch() {
     output = "";
     $.each(acronyms, function(i, field){
         if(~field.acronym.toLowerCase().indexOf(search.toLowerCase())) {
-            output += "<tr>\n<td>" + field.acronym + "</td>\n<td>" + field.full + "</td>\n<td>" + field.description + "</td>\n</tr>\n";
-            console.log(output);
+            output += "<tr><td>" + field.acronym + "</td><td>" + field.full + "</td><td>" + field.description + "</td></tr>";
         }
     })
     $(".ac-container table tbody").empty(output);
     $(".ac-container table tbody").append(output);
 };
+
+$('.version').replaceWith(version);
