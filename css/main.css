@@ -55,9 +55,10 @@ table {
     font-size: 18px;
 }
 
-.search i {
+.search img {
     align-self: center;
     padding-right: 15px;
+    height: 16px;
 }
 
 .branding {
